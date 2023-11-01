@@ -1,13 +1,49 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React + TS</title>
-  </head>
-  <body>
+  
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+        <link href="src/index.css" type="text/css" rel="stylesheet">
+
+        <title>Vite + React + TS</title>
+    </head>
+    <body>
+
+        <nav>
+            <div class="logo">
+                <a href="index.html">
+                    <img src="public/red-teapot.jpg"class="logo">
+                </a>
+            </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="https://github.com/white-lidded-red-teapot/white-lidded-red-teapot.github.io" target="blank">Github code</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+
+    <form>
+    <label for="movie">Movie:</label>
+    <input type="text" id="movie" name="movie">
+
+    <label for="year">Year:</label>
+    <input type="text" id="year" name="year">
+
+    <input type="submit" value="Submit">
+    </form>
+
     <div id="root"></div>
+
     <script type="module" src="/src/main.tsx"></script>
-  </body>
+
+    </body>
+    <footer></footer>
 </html>
