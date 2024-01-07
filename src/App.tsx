@@ -9,6 +9,7 @@ function App() {
 
   return (
     <>
+      <Navbar />
       <SearchBox movie={movie} setMovie={setMovie} />
       <MovieDetails />
     </>
