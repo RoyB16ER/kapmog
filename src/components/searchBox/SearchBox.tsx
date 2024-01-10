@@ -29,9 +29,10 @@ const SearchBox = ({movie, setMovie} : Props) => {
     <>
       <input ref={searchBoxInputRef} id="searchBox" type="text" placeholder='Movie Title' />
       <button type="submit" onClick={handleSubmit}>Submit form</button>
-      
+      {movie && <img src={movie?.Poster}/> }
       <p>
         {movie?.Year}
+        {movie?.Plot}
       </p>
     </>
   )
