@@ -6,7 +6,8 @@ export interface Movie {
   Runtime: string,
   Poster: string,
   Ratings: Rating[],
-  imdbRating: string
+  imdbRating: string,
+  Plot: string
 }
 
 interface Rating {
