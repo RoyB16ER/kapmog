@@ -1,15 +1,12 @@
 import { useRef } from 'react';
 import './SearchBox.css'
 import { omdbService } from '../../services/omdbService';
-import { Movie } from '../../models/movie';
-
-interface Props {
-  movie: Movie | null;
-  setMovie: React.Dispatch<React.SetStateAction<Movie | null>>;
-}
+import { Props } from '../../models/props';
+import { useNavigate } from 'react-router-dom';
 
 const SearchBox = ({movie, setMovie} : Props) => {
   const searchBoxInputRef = useRef<HTMLInputElement>(null);
+  const navigate = useNavigate();
 
   const handleSubmit = async () => {
     const searchBoxInput = searchBoxInputRef.current;
@@ -23,19 +20,16 @@ const SearchBox = ({movie, setMovie} : Props) => {
 
     setMovie(movieResult);
     console.log(movieResult);
+
+    navigate('/');
   }
 
   return (
     <>
       <input ref={searchBoxInputRef} id="searchBox" type="text" placeholder='Movie Title' />
-      <button type="submit" onClick={handleSubmit}>Submit form</button>
-      {movie && <img src={movie?.Poster}/> }
-      <p>
-        {movie?.Year}
-        {movie?.Plot}
-      </p>
+      <button type="submit" onClick={handleSubmit}>Search</button>
     </>
   )
 }
 
-export default SearchBox
+export default SearchBox;

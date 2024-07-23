@@ -1,4 +1,4 @@
-import { omdbService } from '../services/omdbService'
+/*import { omdbService } from '../services/omdbService'
 
 const MovieButton = () => {
 
@@ -12,4 +12,4 @@ const MovieButton = () => {
   )
 }
 
-export default MovieButton
+export default MovieButton;*/

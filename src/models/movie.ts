@@ -10,7 +10,7 @@ export interface Movie {
   Plot: string
 }
 
-interface Rating {
+export interface Rating {
   Source: string,
   Value: string
 }

@@ -1,8 +1,23 @@
 #searchBox {
-  text-align: center;
-  font-size: 32px;
-  padding-top: 1em;
-  padding-bottom: 1em; 
-  margin-top: 6em;
+  margin-right: 10px;
+  width: 200px;
 }
 
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #f2f2f2;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+}
+
+#poster {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
