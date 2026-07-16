@@ -2,12 +2,18 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 import sqlite3
 
-app = FastAPI()
+app = FastAPI(
+    docs_url="/docs",
+    openapi_url="/openapi.json"
+)
 
-# Allow my GitHub Pages URL to make requests to this API
+# Allow my GitHub Pages URL to make requests to this API with explicit OpenAPI routing
 origins = [
     "http://localhost:5173",
     "https://royb16er.github.io",
+    "https://royb16er.github.io/",
+    "https://royb16er.github.io/kapmog",
+    "https://royb16er.github.io/kapmog/",
 ]
 
 # Enable CORS for web development
