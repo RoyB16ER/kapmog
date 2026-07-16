@@ -1,10 +1,10 @@
 import { useRef } from 'react';
 import './SearchBox.css'
-import { omdbService } from '../../services/omdbService';
+import { omdbService } from '../../pages/services/omdbService';
 import { Props } from '../../models/props';
 import { useNavigate } from 'react-router-dom';
 
-const SearchBox = ({movie, setMovie} : Props) => {
+const SearchBox = ({setMovie} : Props) => {
   const searchBoxInputRef = useRef<HTMLInputElement>(null);
   const navigate = useNavigate();
 

@@ -1,8 +1,6 @@
 import { Outlet } from "react-router-dom"
 import Navbar from "./Navbar"
 import { Props } from "../models/props";
-import { Movie } from "../models/movie";
-
 
 const Layout = ({movie, setMovie} : Props) => {
   
@@ -12,8 +10,8 @@ const Layout = ({movie, setMovie} : Props) => {
         <Navbar movie={movie} setMovie={setMovie} />
       </div>
       <main>
-        <Outlet movie={movie} setMovie={setMovie} />
-      </main>      
+        <Outlet context={{ movie, setMovie}} />
+      </main>
     </>
   )
 }

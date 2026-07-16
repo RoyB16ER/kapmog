@@ -4,10 +4,16 @@ import sqlite3
 
 app = FastAPI()
 
+# Allow my GitHub Pages URL to make requests to this API
+origins = [
+    "http://localhost:5173",
+    "https://royb16er.github.io",
+]
+
 # Enable CORS for web development
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"], # In production, swap "*" for your specific frontend URL
+    allow_origins=origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
